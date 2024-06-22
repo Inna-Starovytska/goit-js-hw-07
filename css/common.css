@@ -84,6 +84,15 @@ li {
   flex-direction: column;
   gap: 16px;
 }
+.widget p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  margin: 0;
+}
 .change-color {
   cursor: pointer;
   border: none;
@@ -139,4 +148,21 @@ li {
 }
 #controls button:last-child {
   background: #ff4e4e;
+}
+
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.gallery {
+  width: 1128px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px 24px;
+  margin: 0 auto;
+  padding: 0;
 }

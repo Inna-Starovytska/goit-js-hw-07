@@ -25,38 +25,14 @@ const images = [
   },
 ];
 
-const gallery = document.querySelector(".gallery");
-
-const galleryItems = images
-  .map((image) => {
-    return `
-    <li class="gallery-item">
-      <img src="${image.url}" alt="${image.alt}" class="gallery-image">
-    </li>
-  `;
-  })
+const gallaryList = document.querySelector(".gallery");
+const marcupImages = images
+  .map(
+    ({ url, alt }) => `<li><img src="${url}" alt="${alt}"  width="360"
+  height="300"/></li>`
+  )
   .join("");
 
-gallery.insertAdjacentHTML("beforeend", galleryItems);
+console.log(marcupImages);
 
-const style = document.createElement("style");
-style.textContent = `
-  .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  .gallery-item {
-    flex: 1 1 calc(33.333% - 10px);
-    box-sizing: border-box;
-  }
-  .gallery-image {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-`;
-document.head.appendChild(style);
+gallaryList.insertAdjacentHTML("afterbegin", marcupImages);
